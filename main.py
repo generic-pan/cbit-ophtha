@@ -1,4 +1,3 @@
-
 import streamlit as st
 from streamlit.logger import get_logger
 
@@ -40,7 +39,7 @@ def run():
 
     # Define a function to create an image panel in a column
     def create_image_panel(column):
-        uploaded_file = column.file_uploader("Upload Image Here", type=["jpg", "jpeg", "png"], key=column)
+        uploaded_file = column.file_uploader("Upload Image Here", type=["jpg", "jpeg", "png", "svg"], key=column)
         if uploaded_file is not None:
             column.image(uploaded_file, caption="Uploaded Image")
 
